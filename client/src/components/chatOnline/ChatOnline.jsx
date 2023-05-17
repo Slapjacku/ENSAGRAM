@@ -7,7 +7,7 @@ export default function ChatOnline() {
           <div className="chatOnlineImgContainer">
             <img
               className="chatOnlineImg"
-              src="..\assets\p5.jpeg"
+              src="..\assets\p7.jpeg"
               alt=""
             />
             <div className="chatOnlineBadge"></div>

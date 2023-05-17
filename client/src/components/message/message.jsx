@@ -6,7 +6,7 @@ export default function Message({ message, own }) {
       <div className="messageTop">
         <img
           className="messageImg"
-          src="..\assets\p5.jpeg"
+          src="..\assets\p7.jpeg"
           alt=""
         />
         <p className="messageText">Bonjour je t'envoi un message</p>
