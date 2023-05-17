@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   Box,
   IconButton,
@@ -76,16 +77,20 @@ const Navbar = () => {
       {/* DESKTOP NAV */}
       {isNonMobileScreens ? (
         <FlexBetween gap="2rem">
+          <Link>
           <IconButton onClick={() => dispatch(setMode())}>
             {theme.palette.mode === "dark" ? (
-              <DarkMode sx={{ fontSize: "25px" }} />
+              <DarkMode sx={{ color: "#00D5FA" , fontSize: "25px" }} />
             ) : (
-              <LightMode sx={{ color: dark, fontSize: "25px" }} />
+              <LightMode sx={{ color: "#00D5FA"  , fontSize: "25px" }} />
             )}
-          </IconButton>
-          <Message sx={{ fontSize: "25px" }} />
-          <Notifications sx={{ fontSize: "25px" }} />
-          <Help sx={{ fontSize: "25px" }} />
+          </IconButton></Link>
+          <Link to="/messenger" >
+          <Message sx={{ color: "#00D5FA" , fontSize: "25px" , marginBottom: "-10px" }} /></Link>
+          <Link>
+          <Notifications sx={{ color: "#00D5FA" ,fontSize: "25px", marginBottom: "-10px" }} /></Link>
+          <Link>
+          <Help sx={{ color: "#00D5FA" , fontSize: "25px", marginBottom: "-10px" }} /></Link>
           <FormControl variant="standard" value={fullName}>
             <Select
               value={fullName}
@@ -158,7 +163,8 @@ const Navbar = () => {
                 <LightMode sx={{ color: dark, fontSize: "25px" }} />
               )}
             </IconButton>
-            <Message sx={{ fontSize: "25px" }} />
+            <Link to="/messenger" className="white-link">
+            <Message sx={{ fontSize: "25px" }} /></Link>
             <Notifications sx={{ fontSize: "25px" }} />
             <Help sx={{ fontSize: "25px" }} />
             <FormControl variant="standard" value={fullName}>

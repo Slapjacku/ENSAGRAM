@@ -3,8 +3,12 @@ import "./messenger.css";
 import Conversation from "components/conversations/conversations";
 import Message from "components/message/message";
 import ChatOnline from "components/chatOnline/ChatOnline";
+import { useSelector } from "react-redux";
+import { Box, useMediaQuery } from "@mui/material";
 
 export default function Messenger() {
+    const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
+    const { _id, picturePath } = useSelector((state) => state.user);
     return (
         <>
         <Navbar />
