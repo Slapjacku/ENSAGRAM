@@ -158,15 +158,15 @@ const Navbar = () => {
               sx={{ fontSize: "25px" }}
             >
               {theme.palette.mode === "dark" ? (
-                <DarkMode sx={{ fontSize: "25px" }} />
+                <DarkMode sx={{ color: "#00D5FA", fontSize: "25px" }} />
               ) : (
-                <LightMode sx={{ color: dark, fontSize: "25px" }} />
+                <LightMode sx={{ color: "#00D5FA" , fontSize: "25px" }} />
               )}
             </IconButton>
             <Link to="/messenger" className="white-link">
-            <Message sx={{ fontSize: "25px" }} /></Link>
-            <Notifications sx={{ fontSize: "25px" }} />
-            <Help sx={{ fontSize: "25px" }} />
+            <Message sx={{ color: "#00D5FA", fontSize: "25px" }} /></Link>
+            <Notifications sx={{color: "#00D5FA",  fontSize: "25px" }} />
+            <Help sx={{ color: "#00D5FA", fontSize: "25px" }} />
             <FormControl variant="standard" value={fullName}>
               <Select
                 value={fullName}
